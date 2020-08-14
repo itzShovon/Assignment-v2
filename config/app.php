@@ -229,4 +229,11 @@ return [
 
     ],
 
+    // Custom
+    'title' => env('APP_TITLE', 'Assignment'),
+    'subtitle' => env('APP_SUBTITLE', 'Assignment Submission & Evaluation System'),
+    'abbreviation' => env('APP_TITLE_ABBREVIATION', 'Abbreviation Form'),
+    'short' => env('APP_TITLE_SHORT', 'Short Form'),
+    'version' => env('APP_VERSION', 'Application Version'),
+
 ];
