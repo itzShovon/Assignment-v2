@@ -1972,58 +1972,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -37614,7 +37562,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("dir", [
+  return _c("div", [
     _c(
       "div",
       {
@@ -37669,124 +37617,115 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body p-5" }, [
-                _c("h4", { staticClass: "text-dark mb-5" }, [
-                  _vm._v("Sign In")
-                ]),
-                _vm._v(" "),
-                _c("form", { attrs: { action: "/index.html" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "form-group col-md-12 mb-4" }, [
-                      _c("input", {
-                        staticClass: "form-control input-lg",
-                        attrs: {
-                          type: "email",
-                          id: "email",
-                          "aria-describedby": "emailHelp",
-                          placeholder: "Username"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "form-group col-md-12" }, [
-                      _c("input", {
-                        staticClass: "form-control input-lg",
-                        attrs: {
-                          type: "password",
-                          id: "password",
-                          placeholder: "Password"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-12" }, [
-                      _c(
-                        "div",
-                        { staticClass: "d-flex my-2 justify-content-between" },
-                        [
-                          _c("div", { staticClass: "d-inline-block mr-3" }, [
-                            _c(
-                              "label",
-                              { staticClass: "control control-checkbox" },
-                              [
-                                _vm._v(
-                                  "\n                                                Remember me\n                                                "
-                                ),
-                                _c("input", { attrs: { type: "checkbox" } }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "control-indicator" })
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "text-blue",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Forgot Your Password?")]
-                            )
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-lg btn-primary btn-block mb-4",
-                          attrs: { type: "submit" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                        Sign In\n                                    "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "\n                                        Don't have an account yet ?\n                                        "
-                        ),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "text-blue",
-                            attrs: { href: "sign-up.html" }
-                          },
-                          [_vm._v("Sign Up")]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ])
+              _vm._m(0)
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "copyright pl-0" }, [
-          _c("p", { staticClass: "text-center" }, [
-            _vm._v(
-              "\n                © 2018 Copyright Sleek Dashboard Bootstrap Template by\n                "
-            ),
-            _c(
-              "a",
-              {
-                staticClass: "text-primary",
-                attrs: { href: "http://www.iamabdus.com/", target: "_blank" }
-              },
-              [_vm._v("Abdus")]
-            ),
-            _vm._v(".\n            ")
-          ])
-        ])
+        _vm._m(1)
       ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body p-5" }, [
+      _c("h4", { staticClass: "text-dark mb-5" }, [_vm._v("Sign In")]),
+      _vm._v(" "),
+      _c("form", { attrs: { action: "/index.html" } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "form-group col-md-12 mb-4" }, [
+            _c("input", {
+              staticClass: "form-control input-lg",
+              attrs: {
+                type: "email",
+                id: "email",
+                "aria-describedby": "emailHelp",
+                placeholder: "Username"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-12 " }, [
+            _c("input", {
+              staticClass: "form-control input-lg",
+              attrs: {
+                type: "password",
+                id: "password",
+                placeholder: "Password"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "d-flex my-2 justify-content-between" }, [
+              _c("div", { staticClass: "d-inline-block mr-3" }, [
+                _c("label", { staticClass: "control control-checkbox" }, [
+                  _vm._v(
+                    "Remember me\n                                                "
+                  ),
+                  _c("input", { attrs: { type: "checkbox" } }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "control-indicator" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { staticClass: "text-blue", attrs: { href: "#" } }, [
+                  _vm._v("Forgot Your Password?")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-lg btn-primary btn-block mb-4",
+                attrs: { type: "submit" }
+              },
+              [_vm._v("Sign In")]
+            ),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Don't have an account yet ?\n                                        "
+              ),
+              _c(
+                "a",
+                { staticClass: "text-blue", attrs: { href: "sign-up.html" } },
+                [_vm._v("Sign Up")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "copyright pl-0" }, [
+      _c("p", { staticClass: "text-center" }, [
+        _vm._v(
+          "© 2018 Copyright Sleek Dashboard Bootstrap Template by\n                "
+        ),
+        _c(
+          "a",
+          {
+            staticClass: "text-primary",
+            attrs: { href: "http://www.iamabdus.com/", target: "_blank" }
+          },
+          [_vm._v("Abdus")]
+        ),
+        _vm._v(".\n            ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

@@ -18,38 +18,25 @@
 
 
     <!-- PLUGINS CSS STYLE -->
-    <link href="assets/plugins/nprogress/nprogress.css" rel="stylesheet" />
-
-
+    <link href="{{asset('css/template.css')}}" rel="stylesheet" />
+    {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" /> --}}
 
     <!-- SLEEK CSS -->
-    <link id="sleek-css" rel="stylesheet" href="assets/css/sleek.css" />
 
     <!-- FAVICON -->
     <link href="assets/img/favicon.png" rel="shortcut icon" />
 
 
+    <script src="{{asset('js/nprogress.js')}}"></script>
 
-    <!--
-    HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-  -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-    <script src="assets/plugins/nprogress/nprogress.js"></script>
 </head>
 
 
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
 
     <script>
-        NProgress.configure({
-            showSpinner: false
-        });
+        NProgress.configure({ showSpinner: false });
         NProgress.start();
-
     </script>
 
 
@@ -1564,13 +1551,14 @@
         </div>
     </div>
 
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
-    <script src="assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
-    <script src="assets/plugins/jekyll-search.min.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/template.js')}}"></script>
 
 
-
-    <script src="assets/js/sleek.bundle.js"></script>
+    <script>
+        // NProgress.set(1.0);
+        NProgress.done(true);
+    </script>
 </body>
 
 </html>

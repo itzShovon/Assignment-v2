@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Custom Route
-Route::get('/', 'PagesController@index')->name('home');
+// Route::get('/', 'PagesController@index')->name('home');
+Route::get('/{any}', 'PagesController@index')->where('any', '.*')->name('home');
 // Route::get('/login', 'AuthsController@index')->name('login');
