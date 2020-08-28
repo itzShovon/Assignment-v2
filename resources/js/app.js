@@ -1,32 +1,38 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import BootstrapVue from 'bootstrap-vue';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import Vuelidate from 'vuelidate'
+// import { required, minLength } from 'vuelidate/lib/validators'
 
-require('./bootstrap');
+// axios.defaults.baseURL = process.env.MIX_VUE_APP_ENDPOINT
+// console.log(process.env.MIX_APP_AXIOS_PATH)
+// console.log(process.env.MIX_VUE_APP_ENDPOINT)
+// axios.defaults.baseURL = process.env.MIX_AXIOS_APP_ENDPOINT
+axios.defaults.baseURL = './'
+// console.log(axios.defaults.baseURL)
 
-window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+Vue.prototype.axios = axios
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+// console.log(process.env.MIX_VUE_APP_ENDPOINT)
 
-Vue.component('example-component', require('./components/Auth.vue').default);
+// import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap';
+// import 'jquery-slimscroll';
+// import 'jquery';
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+
+Vue.use( Vuelidate, BootstrapVue, VueAxios, axios );
+
+// new Vue({
+//     ...App
+// }).$mount('#app')
 
 const app = new Vue({
     el: '#app',
+    router,
+    render: h => h(App)
 });

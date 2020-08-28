@@ -21272,11 +21272,6 @@ module.exports = g;
         callToaster("toast-top-left");
       }
     }
-    /*======== 6. PROGRESS BAR ========*/
-
-
-    NProgress.done();
-    /*======== 6. PROGRESS BAR ========*/
 
     $('.slim-scroll-right-sidebar-2').slimScroll({
       opacity: 0,
