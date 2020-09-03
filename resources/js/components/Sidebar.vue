@@ -84,7 +84,7 @@
                             data-parent="#sidebar-menu"
                         >
                             <div class="sub-menu">
-                                <li>
+                                <!-- <li>
                                     <a
                                         class="sidenav-item-link"
                                         href="chat.html"
@@ -118,12 +118,12 @@
                                     >
                                         <span class="nav-text">Calendar</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </div>
                         </ul>
                     </li>
 
-                    <li class="has-sub active expand">
+                    <!-- <li class="has-sub active expand">
                         <a
                             class="sidenav-item-link"
                             href="javascript:void(0)"
@@ -328,7 +328,7 @@
                                 </li>
                             </div>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
