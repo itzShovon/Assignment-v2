@@ -241,5 +241,6 @@ return [
     'abbreviation' => env('APP_TITLE_ABBREVIATION', 'Abbreviation Form'),
     'short' => env('APP_TITLE_SHORT', 'Short Form'),
     'version' => env('APP_VERSION', 'Application Version'),
+    'ru_key' => env('RU_SECRET_KEY', 'RU SECRET Key'),
 
 ];
