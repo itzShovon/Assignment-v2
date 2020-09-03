@@ -14,7 +14,7 @@ class AuthsController extends Controller
 
     public function login(Request $request){
         $this->validate($request, [
-            'id' => 'required|string',
+            'id' => 'required|string|numeric',
             'password' => 'required|string'
         ]);
 
