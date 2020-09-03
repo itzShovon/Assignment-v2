@@ -28,7 +28,7 @@ class AuthsController extends Controller
     //    }
 
         // return response()->json(['error' => 'Error msg', $exception], 404);
-        return response()->json(['error'=>'Done!', 'response' => $response], 404);
+        return $response;
         // $validated = $request->validated();
         // return $validated;
     }

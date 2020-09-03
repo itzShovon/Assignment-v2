@@ -191,11 +191,14 @@ export default {
                     // });
                     this.axios.post("/api/login", this.form)
                     .then((response) => {
-                        this.submitStatus = 'OK'
-                        this.$router.push({ name: "home" });
+                        if(res.status === 200){
+                            this.submitStatus = 'OK'
+                            this.$router.push({ name: "home" });
+                            consol.log('response');
+                        }
                     })
                     .catch(error => {
-                        console.log(error.response.data);
+                        // console.log(error.response.data);
                         this.submitStatus = 'ERROR';
                         this.errors = error.response.data.errors;
                         // console.clear();
