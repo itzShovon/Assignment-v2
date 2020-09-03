@@ -227,6 +227,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'RUAuth' => App\RUAuths\RuAuth::class,
+        'Auth' => App\RUAuths\Auth::class,
+        'TextCompare' => App\Plagiarism\TextCompare::class,
+        'File2Text' => App\Plagiarism\File2Text::class,
+        'MatchChecker' => App\Plagiarism\MatchChecker::class,
+
     ],
 
     // Custom

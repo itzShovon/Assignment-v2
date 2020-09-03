@@ -2,7 +2,7 @@
     <aside class="left-sidebar bg-sidebar">
         <div id="sidebar" class="sidebar">
             <div class="app-brand">
-                <router-link to='/' :title="app_title_abbreviation" exact>
+                <router-link to='/home' :title="app_title_abbreviation" exact>
                     <svg
                         class="brand-icon"
                         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@
             </div>
             <div class="sidebar-scrollbar">
                 <ul class="nav sidebar-inner" id="sidebar-menu">
-                    <li class="has-sub" v-bind:class="{ 'active': $route.path == '/' }">
+                    <li class="has-sub" v-bind:class="{ 'active': $route.path == '/home' }">
                         <a
                             class="sidenav-item-link"
                             href="javascript:void(0)"
@@ -51,7 +51,7 @@
                         >
                             <div class="sub-menu">
                                 <li>
-                                    <router-link to='/' title="Home" exact>
+                                    <router-link to='/home' title="Home" exact>
                                         <span class="nav-text">Home</span>
                                     </router-link>
                                 </li>

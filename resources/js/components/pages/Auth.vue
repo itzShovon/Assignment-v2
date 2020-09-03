@@ -162,7 +162,7 @@ export default {
         form: {
             id: {
                 required,
-                minLength: minLength(8)
+                minLength: minLength(8),
             },
             password: {
                 required,
@@ -172,22 +172,33 @@ export default {
 
     methods: {
         submit() {
-            console.log('submit!')
+            // console.log('submit!')
             this.$v.$touch()
             if (this.$v.$invalid) {
                 this.submitStatus = 'ERROR'
             } else {
-                // do your submit logic here
                 this.submitStatus = 'PENDING'
                 setTimeout(() => {
+                    // this.axios.post('/api/login', this.form)
+                    // .then(function (response) {
+                    //     this.submitStatus = 'OK';
+                    //     console.log(response);
+                    // })
+                    // .catch(function (error) {
+                    //     console.log(error);
+                    //     this.submitStatus = 'ERROR';
+                    //     this.errors = error.response.data.errors;
+                    // });
                     this.axios.post("/api/login", this.form)
-                    .then(() => {
+                    .then((response) => {
                         this.submitStatus = 'OK'
                         this.$router.push({ name: "home" });
                     })
                     .catch(error => {
-                        this.submitStatus = 'ERROR'
+                        console.log(error.response.data);
+                        this.submitStatus = 'ERROR';
                         this.errors = error.response.data.errors;
+                        // console.clear();
                     });
                 }, 500)
             }

@@ -2515,24 +2515,34 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      console.log('submit!');
+      // console.log('submit!')
       this.$v.$touch();
 
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR';
       } else {
-        // do your submit logic here
         this.submitStatus = 'PENDING';
         setTimeout(function () {
-          _this.axios.post("/api/login", _this.form).then(function () {
+          // this.axios.post('/api/login', this.form)
+          // .then(function (response) {
+          //     this.submitStatus = 'OK';
+          //     console.log(response);
+          // })
+          // .catch(function (error) {
+          //     console.log(error);
+          //     this.submitStatus = 'ERROR';
+          //     this.errors = error.response.data.errors;
+          // });
+          _this.axios.post("/api/login", _this.form).then(function (response) {
             _this.submitStatus = 'OK';
 
             _this.$router.push({
               name: "home"
             });
           })["catch"](function (error) {
+            console.log(error.response.data);
             _this.submitStatus = 'ERROR';
-            _this.errors = error.response.data.errors;
+            _this.errors = error.response.data.errors; // console.clear();
           });
         }, 500);
       }
@@ -49831,7 +49841,11 @@ var render = function() {
           _c(
             "router-link",
             {
-              attrs: { to: "/", title: _vm.app_title_abbreviation, exact: "" }
+              attrs: {
+                to: "/home",
+                title: _vm.app_title_abbreviation,
+                exact: ""
+              }
             },
             [
               _c(
@@ -49882,7 +49896,7 @@ var render = function() {
               "li",
               {
                 staticClass: "has-sub",
-                class: { active: _vm.$route.path == "/" }
+                class: { active: _vm.$route.path == "/home" }
               },
               [
                 _vm._m(0),
@@ -49900,7 +49914,9 @@ var render = function() {
                         [
                           _c(
                             "router-link",
-                            { attrs: { to: "/", title: "Home", exact: "" } },
+                            {
+                              attrs: { to: "/home", title: "Home", exact: "" }
+                            },
                             [
                               _c("span", { staticClass: "nav-text" }, [
                                 _vm._v("Home")
@@ -68284,7 +68300,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.axios = axios__WEBPACK_IMPO
 // import 'jquery-slimscroll';
 // import 'jquery';
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuelidate__WEBPACK_IMPORTED_MODULE_6___default.a, bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_5___default.a, axios__WEBPACK_IMPORTED_MODULE_4___default.a); // new Vue({
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuelidate__WEBPACK_IMPORTED_MODULE_6___default.a, axios__WEBPACK_IMPORTED_MODULE_4___default.a, bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_5___default.a); // new Vue({
 //     ...App
 // }).$mount('#app')
 
@@ -68629,13 +68645,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
-var routes = [// {
-//     path: '*',
-//     component: Error404
-// },
-{
-  path: "/",
+var routes = [{
+  path: '*',
+  component: _components_pages_Auth_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+}, {
+  path: "/home",
   name: "home",
   component: _components_pages_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {

@@ -25,7 +25,7 @@ Vue.prototype.axios = axios
 // import 'jquery';
 
 
-Vue.use( Vuelidate, BootstrapVue, VueAxios, axios );
+Vue.use( Vuelidate, axios, BootstrapVue, VueAxios );
 
 // new Vue({
 //     ...App
